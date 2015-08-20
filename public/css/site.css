@@ -1,0 +1,39 @@
+*{
+	box-sizing: border-box;
+}
+.hcenter {
+	text-align: center;
+}
+
+.vcenter {
+	vertical-align: middle;
+}
+
+.flex-container {
+	display:flex;
+	width:100%;
+	flex-wrap: wrap;
+}
+
+.task-col {
+	width:30%;
+	margin: calc(3.33% / 2);
+}
+
+.pcontent {
+	word-wrap: break-word;
+}
+.completed {
+	text-decoration: line-through;
+}
+#header{
+	font-family: Impact;
+}
+#taskdisplay{
+	color:#FFA366;
+	font-size:20px;
+}
+#timedate{
+	color:#999999;
+	font-size:15px;
+}

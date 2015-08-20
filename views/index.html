@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>My App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div text-align="center" class="container-fluid">
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<!--line 17 displays 'Task List App' on the navbar-->
+					<li><h2 id="header">Task List App </h2></li>
+					<br />
+					<!--line 20 is a button that routes the page to the '/add' url and renders the addTask.html-->
+					<li><button ui-sref="add"><strong>Add Task</strong></button></li>
+				</span>
+			</li>
+		</ul>
+	</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+<ui-view></ui-view>
+<!-- Ext Libs -->
+<script src="angular/angular.min.js"></script>
+<script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+<!-- Global Src -->
+<script src="/javascript/app.js"></script>
+<!-- Factories -->
+<script src="/javascript/services/HomeFactory.js"></script>
+<!-- Controllers -->
+<script src="/javascript/controllers/HomeController.js"></script>
+<script src="/javascript/controllers/addTaskController.js"></script>
+</body>
+</html>

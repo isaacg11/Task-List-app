@@ -1,0 +1,19 @@
+<div ng-controller="HomeController as vm" class="flex-container">
+	<br>
+	<div ng-repeat="t in vm.tasks" class="task-col">
+		<div class="panel panel-default">
+			<div align="center" class="panel-heading">
+				<span class="panel-title clickable" ui-sref="TaskDetail({id:t._id})">Task</span>
+				<span style="float:right">{{t.comments.length}}</span>			
+			</div>
+			<div class="panel panel-body clickable ng-class:{ 'completed': t.dateCompleted ? true : false}" ui-sref="TaskDetail({id:t._id})">
+				<p id="taskdisplay" class="hcenter pcontent">{{t.description}}</p>
+				<div id="timedate"><i>created: </i>{{t.dateCreated | date: "short"}}</div>
+			</div>
+			<div align="center" class="panel-footer">
+				<button class="btn btn-danger" ng-click="vm.deleteTask(t);">Delete</button>
+				<button class="btn btn-warning" ng-click="vm.completeTask(t);" ng-show="!t.dateCompleted">Complete</button>
+			</div>
+		</div>
+	</div>
+</div>

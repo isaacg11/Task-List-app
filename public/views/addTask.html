@@ -1,0 +1,14 @@
+
+<div ng-controller="addTaskController as vm">
+	<form ng-submit="vm.addTask()" class="well container">
+		<div class="form-input">
+			<label>Description</label>
+			<textarea class="form-control" ng-model="vm.task.description" rows="5"></textarea>
+		</div>
+		<br>
+		<div class="hcenter">
+			<!--line 11 is a button that when submitted activates the 'addTask()' function on line 16 in addTaskController.js file; at the same time, it targets all the data entered within the ng-submit form on line 6 and passes that data as vm.task to the 'addTask()' function-->
+			<button class="btn btn-lg btn-default" type="submit">Submit</button>
+		</div>
+	</form>
+</div>
